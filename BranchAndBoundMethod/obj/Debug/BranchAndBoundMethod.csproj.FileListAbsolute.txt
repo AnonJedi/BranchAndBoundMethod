@@ -1,0 +1,13 @@
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\BranchAndBoundMethod.exe.config
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\BranchAndBoundMethod.exe
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\BranchAndBoundMethod.pdb
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.csprojResolveAssemblyReference.cache
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Form1.resources
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Properties.Resources.resources
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.csproj.GenerateResource.Cache
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.exe
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.pdb
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\MathParser.dll
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\en\BranchAndBoundMethod.resources.dll
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Form1.en.resources
+c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\en\BranchAndBoundMethod.resources.dll
