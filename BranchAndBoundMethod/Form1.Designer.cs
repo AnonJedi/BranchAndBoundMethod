@@ -30,12 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ExitButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FTextBox = new System.Windows.Forms.TextBox();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.AddConButton = new System.Windows.Forms.Button();
-            this.CTextBox = new System.Windows.Forms.TextBox();
+            this.FuncLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CalcBtn = new System.Windows.Forms.Button();
+            this.display = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -47,43 +46,12 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // label1
+            // FuncLbl
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Name = "label1";
-            // 
-            // FTextBox
-            // 
-            this.FTextBox.BackColor = System.Drawing.SystemColors.MenuText;
-            this.FTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            resources.ApplyResources(this.FTextBox, "FTextBox");
-            this.FTextBox.Name = "FTextBox";
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.AddButton, "AddButton");
-            this.AddButton.Name = "AddButton";
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // AddConButton
-            // 
-            this.AddConButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddConButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.AddConButton, "AddConButton");
-            this.AddConButton.Name = "AddConButton";
-            this.AddConButton.UseVisualStyleBackColor = false;
-            this.AddConButton.Click += new System.EventHandler(this.AddConButton_Click);
-            // 
-            // CTextBox
-            // 
-            this.CTextBox.BackColor = System.Drawing.SystemColors.MenuText;
-            resources.ApplyResources(this.CTextBox, "CTextBox");
-            this.CTextBox.Name = "CTextBox";
+            resources.ApplyResources(this.FuncLbl, "FuncLbl");
+            this.FuncLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FuncLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.FuncLbl.Name = "FuncLbl";
             // 
             // label2
             // 
@@ -91,18 +59,39 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Name = "label2";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Name = "label1";
+            // 
+            // CalcBtn
+            // 
+            this.CalcBtn.BackColor = System.Drawing.SystemColors.ControlText;
+            this.CalcBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.CalcBtn, "CalcBtn");
+            this.CalcBtn.Name = "CalcBtn";
+            this.CalcBtn.UseVisualStyleBackColor = false;
+            this.CalcBtn.Click += new System.EventHandler(this.CalcBtn_Click);
+            // 
+            // display
+            // 
+            this.display.BackColor = System.Drawing.SystemColors.MenuText;
+            this.display.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.display, "display");
+            this.display.Name = "display";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::BranchAndBoundMethod.Properties.Resources.Random_HD_Wallpapers_6;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CTextBox);
-            this.Controls.Add(this.AddConButton);
-            this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.FTextBox);
+            this.Controls.Add(this.display);
+            this.Controls.Add(this.CalcBtn);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.FuncLbl);
             this.Controls.Add(this.ExitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -114,12 +103,11 @@
         #endregion
 
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox FTextBox;
-        private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button AddConButton;
-        private System.Windows.Forms.TextBox CTextBox;
+        private System.Windows.Forms.Label FuncLbl;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CalcBtn;
+        private System.Windows.Forms.TextBox display;
     }
 }
 
