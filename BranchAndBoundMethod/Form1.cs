@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-<<<<<<< HEAD
 using System.Drawing;
-=======
->>>>>>> origin/master
 
 namespace BranchAndBoundMethod
 {
@@ -18,16 +15,10 @@ namespace BranchAndBoundMethod
         #endregion
 
         #region Var
-
-<<<<<<< HEAD
         private double[,] M = new double[3,3];
         private string[,] title = new string[2,4];
         private double X1, X2, X1C1, X1C2, X2C1, X2C2, C1, C2;
         private Point point = new Point();
-=======
-        private double x1, x2, x3, x4;
-
->>>>>>> origin/master
         #endregion
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -35,7 +26,6 @@ namespace BranchAndBoundMethod
             Application.Exit();
         }
 
-<<<<<<< HEAD
         private void CalcButton_Click(object sender, EventArgs e)
         {
             if ((X1Box.Text == "") || (X2Box.Text == "") || (X1C1Box.Text == "") || (X1C2Box.Text == "") || (X2C1Box.Text == "") || (X2C2Box.Text == "") || (C1Box.Text == "") || (C2Box.Text == ""))
@@ -68,6 +58,7 @@ namespace BranchAndBoundMethod
 
             ResBox.Text += "Составим симплекс-таблицу:\r\n";
 
+            #region init
             title[0, 0] = "БП";
             title[0, 1] = "СП";
             title[0, 2] = "X1";
@@ -86,6 +77,7 @@ namespace BranchAndBoundMethod
             M[0, 2] = X2C1;
             M[1, 2] = X2C2;
             M[2, 2] = X2;
+            #endregion
 
             buildTable(M, title);
 
@@ -154,18 +146,13 @@ namespace BranchAndBoundMethod
             ResBox.Text += "\r\n" + t[0, 0] + "  " + t[0, 1] + "  " + t[0, 2] + "  " + t[0, 3] + "\r\n";
             for (int i = 0; i < 3; i++)
             {
-                ResBox.Text += t[1, i+1];
+                ResBox.Text += t[1, i + 1];
                 for (int j = 0; j < 3; j++)
                 {
                     ResBox.Text += "  " + m[i, j];
                 }
                 ResBox.Text += "\r\n";
             }
-=======
-        private void CalcBtn_Click(object sender, EventArgs e)
-        {
-
->>>>>>> origin/master
         }
     }
 }

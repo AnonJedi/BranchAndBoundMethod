@@ -144,46 +144,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ExitButton.ZOrder" xml:space="preserve">
-<<<<<<< HEAD
-    <value>18</value>
-=======
-    <value>5</value>
->>>>>>> origin/master
-  </data>
-  <data name="FuncLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FuncLbl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 14.25pt, style=Italic</value>
-  </data>
-<<<<<<< HEAD
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 76</value>
-=======
-  <data name="FuncLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
->>>>>>> origin/master
-  </data>
-  <data name="FuncLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="FuncLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="FuncLbl.Text" xml:space="preserve">
-    <value>F = 2*x1 + 3*x2</value>
-  </data>
-  <data name="&gt;&gt;FuncLbl.Name" xml:space="preserve">
-    <value>FuncLbl</value>
-  </data>
-  <data name="&gt;&gt;FuncLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FuncLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-<<<<<<< HEAD
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
   <data name="X1Box.Location" type="System.Drawing.Point, System.Drawing">
@@ -205,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;X1Box.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="CalcButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 205</value>
@@ -229,7 +189,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CalcButton.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="X2Box.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 77</value>
@@ -250,138 +210,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;X2Box.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 171</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 16</value>
-=======
-  <data name="&gt;&gt;FuncLbl.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 14.25pt, style=Italic</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 49</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Conditions:</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 14.25pt, style=Italic</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 71</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 66</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>3*x1 + 4*x2 &lt;= 24
-2*x1 + 5*x2 &lt;= 22
-x1,2 &gt;= 0 - целые</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CalcBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 140</value>
-  </data>
-  <data name="CalcBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="CalcBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="CalcBtn.Text" xml:space="preserve">
-    <value>Calculate</value>
-  </data>
-  <data name="&gt;&gt;CalcBtn.Name" xml:space="preserve">
-    <value>CalcBtn</value>
-  </data>
-  <data name="&gt;&gt;CalcBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CalcBtn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;CalcBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="display.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 9</value>
-  </data>
-  <data name="display.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
->>>>>>> origin/master
-  </data>
-  <data name="display.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 276</value>
-  </data>
-<<<<<<< HEAD
-  <data name="label2.Text" xml:space="preserve">
-    <value>Xi &gt;= 0</value>
-=======
-  <data name="display.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
->>>>>>> origin/master
-  </data>
-  <data name="&gt;&gt;display.Name" xml:space="preserve">
-    <value>display</value>
-  </data>
-  <data name="&gt;&gt;display.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;display.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-<<<<<<< HEAD
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
@@ -725,10 +553,37 @@ x1,2 &gt;= 0 - целые</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ResBox.ZOrder" xml:space="preserve">
-=======
-  <data name="&gt;&gt;display.ZOrder" xml:space="preserve">
->>>>>>> origin/master
     <value>0</value>
+  </data>
+  <data name="FuncLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FuncLbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 14.25pt, style=Italic</value>
+  </data>
+  <data name="FuncLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 76</value>
+  </data>
+  <data name="FuncLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 22</value>
+  </data>
+  <data name="FuncLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FuncLbl.Text" xml:space="preserve">
+    <value>F =</value>
+  </data>
+  <data name="&gt;&gt;FuncLbl.Name" xml:space="preserve">
+    <value>FuncLbl</value>
+  </data>
+  <data name="&gt;&gt;FuncLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FuncLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FuncLbl.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
