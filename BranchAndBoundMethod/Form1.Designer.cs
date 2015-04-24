@@ -31,11 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ExitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.FTextBox = new System.Windows.Forms.TextBox();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.AddConButton = new System.Windows.Forms.Button();
-            this.CTextBox = new System.Windows.Forms.TextBox();
+            this.X1Box = new System.Windows.Forms.TextBox();
+            this.CalcButton = new System.Windows.Forms.Button();
+            this.X2Box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.X1C1Box = new System.Windows.Forms.TextBox();
+            this.X2C1Box = new System.Windows.Forms.TextBox();
+            this.C1Box = new System.Windows.Forms.TextBox();
+            this.C2Box = new System.Windows.Forms.TextBox();
+            this.X2C2Box = new System.Windows.Forms.TextBox();
+            this.X1C2Box = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ResBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -54,36 +66,28 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Name = "label1";
             // 
-            // FTextBox
+            // X1Box
             // 
-            this.FTextBox.BackColor = System.Drawing.SystemColors.MenuText;
-            this.FTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            resources.ApplyResources(this.FTextBox, "FTextBox");
-            this.FTextBox.Name = "FTextBox";
+            this.X1Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.X1Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.X1Box, "X1Box");
+            this.X1Box.Name = "X1Box";
             // 
-            // AddButton
+            // CalcButton
             // 
-            this.AddButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.AddButton, "AddButton");
-            this.AddButton.Name = "AddButton";
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            this.CalcButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CalcButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.CalcButton, "CalcButton");
+            this.CalcButton.Name = "CalcButton";
+            this.CalcButton.UseVisualStyleBackColor = false;
+            this.CalcButton.Click += new System.EventHandler(this.CalcButton_Click);
             // 
-            // AddConButton
+            // X2Box
             // 
-            this.AddConButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddConButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.AddConButton, "AddConButton");
-            this.AddConButton.Name = "AddConButton";
-            this.AddConButton.UseVisualStyleBackColor = false;
-            this.AddConButton.Click += new System.EventHandler(this.AddConButton_Click);
-            // 
-            // CTextBox
-            // 
-            this.CTextBox.BackColor = System.Drawing.SystemColors.MenuText;
-            resources.ApplyResources(this.CTextBox, "CTextBox");
-            this.CTextBox.Name = "CTextBox";
+            this.X2Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.X2Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.X2Box, "X2Box");
+            this.X2Box.Name = "X2Box";
             // 
             // label2
             // 
@@ -91,17 +95,114 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Name = "label2";
             // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Name = "label6";
+            // 
+            // X1C1Box
+            // 
+            this.X1C1Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.X1C1Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.X1C1Box, "X1C1Box");
+            this.X1C1Box.Name = "X1C1Box";
+            // 
+            // X2C1Box
+            // 
+            this.X2C1Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.X2C1Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.X2C1Box, "X2C1Box");
+            this.X2C1Box.Name = "X2C1Box";
+            // 
+            // C1Box
+            // 
+            this.C1Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.C1Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.C1Box, "C1Box");
+            this.C1Box.Name = "C1Box";
+            // 
+            // C2Box
+            // 
+            this.C2Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.C2Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.C2Box, "C2Box");
+            this.C2Box.Name = "C2Box";
+            // 
+            // X2C2Box
+            // 
+            this.X2C2Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.X2C2Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.X2C2Box, "X2C2Box");
+            this.X2C2Box.Name = "X2C2Box";
+            // 
+            // X1C2Box
+            // 
+            this.X1C2Box.BackColor = System.Drawing.SystemColors.MenuText;
+            this.X1C2Box.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.X1C2Box, "X1C2Box");
+            this.X1C2Box.Name = "X1C2Box";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Name = "label7";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Name = "label8";
+            // 
+            // ResBox
+            // 
+            this.ResBox.BackColor = System.Drawing.SystemColors.InfoText;
+            this.ResBox.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.ResBox, "ResBox");
+            this.ResBox.Name = "ResBox";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::BranchAndBoundMethod.Properties.Resources.Random_HD_Wallpapers_6;
+            this.Controls.Add(this.ResBox);
+            this.Controls.Add(this.C2Box);
+            this.Controls.Add(this.X2C2Box);
+            this.Controls.Add(this.X1C2Box);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.C1Box);
+            this.Controls.Add(this.X2C1Box);
+            this.Controls.Add(this.X1C1Box);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.CTextBox);
-            this.Controls.Add(this.AddConButton);
-            this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.FTextBox);
+            this.Controls.Add(this.X2Box);
+            this.Controls.Add(this.CalcButton);
+            this.Controls.Add(this.X1Box);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -115,11 +216,23 @@
 
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox FTextBox;
-        private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button AddConButton;
-        private System.Windows.Forms.TextBox CTextBox;
+        private System.Windows.Forms.TextBox X1Box;
+        private System.Windows.Forms.Button CalcButton;
+        private System.Windows.Forms.TextBox X2Box;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox X1C1Box;
+        private System.Windows.Forms.TextBox X2C1Box;
+        private System.Windows.Forms.TextBox C1Box;
+        private System.Windows.Forms.TextBox C2Box;
+        private System.Windows.Forms.TextBox X2C2Box;
+        private System.Windows.Forms.TextBox X1C2Box;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox ResBox;
     }
 }
 

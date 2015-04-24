@@ -11,3 +11,16 @@ c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMe
 c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\en\BranchAndBoundMethod.resources.dll
 c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Form1.en.resources
 c:\users\vik\documents\visual studio 2012\Projects\Optimisation\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\en\BranchAndBoundMethod.resources.dll
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\BranchAndBoundMethod.exe.config
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.exe
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.pdb
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\BranchAndBoundMethod.exe
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\BranchAndBoundMethod.pdb
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\en\BranchAndBoundMethod.resources.dll
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\bin\Debug\MathParser.dll
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.csprojResolveAssemblyReference.cache
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Form1.resources
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Properties.Resources.resources
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.Form1.en.resources
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\BranchAndBoundMethod.csproj.GenerateResource.Cache
+D:\git\BranchAndBoundMethod\BranchAndBoundMethod\obj\Debug\en\BranchAndBoundMethod.resources.dll
