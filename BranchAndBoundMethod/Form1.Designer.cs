@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ExitButton = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
             this.X1Box = new System.Windows.Forms.TextBox();
             this.CalcButton = new System.Windows.Forms.Button();
@@ -48,6 +49,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ResBox = new System.Windows.Forms.TextBox();
+=======
+            this.FuncLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CalcBtn = new System.Windows.Forms.Button();
+            this.display = new System.Windows.Forms.TextBox();
+>>>>>>> origin/master
             this.SuspendLayout();
             // 
             // ExitButton
@@ -59,6 +67,7 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+<<<<<<< HEAD
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -88,12 +97,42 @@
             this.X2Box.ForeColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.X2Box, "X2Box");
             this.X2Box.Name = "X2Box";
+=======
+            // FuncLbl
+            // 
+            resources.ApplyResources(this.FuncLbl, "FuncLbl");
+            this.FuncLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FuncLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.FuncLbl.Name = "FuncLbl";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Name = "label1";
+            // 
+            // CalcBtn
+            // 
+            this.CalcBtn.BackColor = System.Drawing.SystemColors.ControlText;
+            this.CalcBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.CalcBtn, "CalcBtn");
+            this.CalcBtn.Name = "CalcBtn";
+            this.CalcBtn.UseVisualStyleBackColor = false;
+            this.CalcBtn.Click += new System.EventHandler(this.CalcBtn_Click);
+>>>>>>> origin/master
+            // 
+            // display
+            // 
+            this.display.BackColor = System.Drawing.SystemColors.MenuText;
+            this.display.ForeColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.display, "display");
+            this.display.Name = "display";
             // 
             // label3
             // 
@@ -186,6 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::BranchAndBoundMethod.Properties.Resources.Random_HD_Wallpapers_6;
+<<<<<<< HEAD
             this.Controls.Add(this.ResBox);
             this.Controls.Add(this.C2Box);
             this.Controls.Add(this.X2C2Box);
@@ -203,7 +243,13 @@
             this.Controls.Add(this.X2Box);
             this.Controls.Add(this.CalcButton);
             this.Controls.Add(this.X1Box);
+=======
+            this.Controls.Add(this.display);
+            this.Controls.Add(this.CalcBtn);
+>>>>>>> origin/master
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.FuncLbl);
             this.Controls.Add(this.ExitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -215,6 +261,7 @@
         #endregion
 
         private System.Windows.Forms.Button ExitButton;
+<<<<<<< HEAD
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox X1Box;
         private System.Windows.Forms.Button CalcButton;
@@ -233,6 +280,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox ResBox;
+=======
+        private System.Windows.Forms.Label FuncLbl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CalcBtn;
+        private System.Windows.Forms.TextBox display;
+>>>>>>> origin/master
     }
 }
 

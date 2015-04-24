@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Drawing;
+=======
+>>>>>>> origin/master
 
 namespace BranchAndBoundMethod
 {
@@ -16,10 +19,15 @@ namespace BranchAndBoundMethod
 
         #region Var
 
+<<<<<<< HEAD
         private double[,] M = new double[3,3];
         private string[,] title = new string[2,4];
         private double X1, X2, X1C1, X1C2, X2C1, X2C2, C1, C2;
         private Point point = new Point();
+=======
+        private double x1, x2, x3, x4;
+
+>>>>>>> origin/master
         #endregion
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -27,6 +35,7 @@ namespace BranchAndBoundMethod
             Application.Exit();
         }
 
+<<<<<<< HEAD
         private void CalcButton_Click(object sender, EventArgs e)
         {
             if ((X1Box.Text == "") || (X2Box.Text == "") || (X1C1Box.Text == "") || (X1C2Box.Text == "") || (X2C1Box.Text == "") || (X2C2Box.Text == "") || (C1Box.Text == "") || (C2Box.Text == ""))
@@ -152,6 +161,11 @@ namespace BranchAndBoundMethod
                 }
                 ResBox.Text += "\r\n";
             }
+=======
+        private void CalcBtn_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> origin/master
         }
     }
 }
