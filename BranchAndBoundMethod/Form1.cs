@@ -15,7 +15,8 @@ namespace BranchAndBoundMethod
         #endregion
 
         #region Var
-        private double[,] M = new double[3,3];
+        private List<List<double>> clm = new List<List<double>>();
+        private List<double> str = new List<double>(); 
         private string[,] title = new string[2,4];
         private Point point = new Point();
         #endregion
@@ -37,15 +38,26 @@ namespace BranchAndBoundMethod
 
             try
             {
-                M[2, 1] = -1*Convert.ToDouble(X1Box.Text);
-                M[2, 2] = -1*Convert.ToDouble(X2Box.Text);
-                M[0, 1] = -1*Convert.ToDouble(X1C1Box.Text);
-                M[1, 1] = -1*Convert.ToDouble(X1C2Box.Text);
-                M[0, 2] = -1*Convert.ToDouble(X2C1Box.Text);
-                M[1, 2] = -1*Convert.ToDouble(X2C2Box.Text);
-                M[0, 0] = -1*Convert.ToDouble(C1Box.Text);
-                M[1, 0] = -1*Convert.ToDouble(C2Box.Text);
-                M[2, 0] = 0;
+                str.Add(-1*Convert.ToDouble(C1Box.Text));
+                str.Add(-1*Convert.ToDouble(C2Box.Text));
+                str.Add(0);
+                clm.Add(str);
+
+                str = new List<double>();
+
+                str.Add(-1*Convert.ToDouble(X1C1Box.Text));
+                str.Add(-1*Convert.ToDouble(X1C2Box.Text));
+                str.Add(-1*Convert.ToDouble(X1Box.Text));
+                clm.Add(str);
+                
+                str = new List<double>();
+
+                str.Add(-1*Convert.ToDouble(X2C1Box.Text));
+                str.Add(-1*Convert.ToDouble(X2C2Box.Text));
+                str.Add(-1*Convert.ToDouble(X2Box.Text));
+                clm.Add(str);
+
+                str = new List<double>();
             }
             catch (Exception)
             {
@@ -66,18 +78,18 @@ namespace BranchAndBoundMethod
             #endregion
 
             ResBox.Text += "Домножим оба неравества на -1. Введем дополнительные переменные X3, X4\r\n";
-            ResBox.Text += M[0, 1] + "X1" + " + (" + M[0, 2] + ")X2 + X3 = " + M[0, 0] + "\r\n";
-            ResBox.Text += M[1, 1] + "X1" + " + (" + M[1, 2] + ")X2 + X4 = " + M[1, 0] + "\r\n";
+            ResBox.Text += clm[1][0] + "X1" + " + (" + clm[2][0] + ")X2 + X3 = " + clm[0][0] + "\r\n";
+            ResBox.Text += clm[1][1] + "X1" + " + (" + clm[2][1] + ")X2 + X4 = " + clm[0][1] + "\r\n";
 
             ResBox.Text += "Составим симплекс-таблицу:\r\n";
 
-            buildTable(M, title);
+            buildTable(clm, title);
 
             try
             {
                 while (!calcBase())
                 {
-                    M = getSymTable(M);
+                    clm = getSymTable(clm);
                 }
             }
             catch (EntryPointNotFoundException)
@@ -92,9 +104,9 @@ namespace BranchAndBoundMethod
             while (!PosF)
             {
                 PosF = true;
-                for (int i = 1; i < 3; i++)
+                for (int i = 1; i < clm.Count; i++)
                 {
-                    if (M[2, i] < 0)
+                    if (clm[i][clm[0].Count - 1] < 0)
                     {
                         PosF = false;
                     }
@@ -105,7 +117,7 @@ namespace BranchAndBoundMethod
                     try
                     {
                         calcFBase();
-                        M = getSymTable(M);
+                        clm = getSymTable(clm);
                     }
                     catch (EntryPointNotFoundException)
                     {
@@ -115,92 +127,101 @@ namespace BranchAndBoundMethod
             }
 
             ResBox.Text += "\r\nРешение ветви:\r\n" + title[0, 2] + " = " + title[0, 3] + " = 0\r\n";
-            ResBox.Text += title[1, 1] + " = " + M[0, 0] + "\r\n";
-            ResBox.Text += title[1, 2] + " = " + M[1, 0] + "\r\n";
-            ResBox.Text += title[1, 3] + " = " + M[2, 0] + "\r\n";
+            ResBox.Text += title[1, 1] + " = " + clm[0][0] + "\r\n";
+            ResBox.Text += title[1, 2] + " = " + clm[0][1] + "\r\n";
+            ResBox.Text += title[1, 3] + " = " + clm[0][2] + "\r\n";
 
             return;
         }
 
-        private double[,] getSymTable(double[,] m)
+        private List<List<double>> getSymTable(List<List<double>> l)
         {
             ResBox.Text += "Базисный элемент: M[" + (point.X + 1) + "," + (point.Y + 1) + "] = " +
-                               M[point.X, point.Y] + "\r\n\r\n";
+                               l[point.Y][point.X] + "\r\n\r\n";
             ResBox.Text += "Пересчёт таблицы\r\n";
-            double[,] oldM = new double[3, 3];
-            oldM = m;
-            m = new double[3, 3];
+            List<List<double>> oldL = new List<List<double>>();
+            oldL = l;
+            l = new List<List<double>>();
 
-            m[point.X, point.Y] = Math.Round(1/oldM[point.X, point.Y], 3);     //пересчёт ведущего элемента
+            for (int i = 0; i < oldL.Count; i++)
+            {
+                l.Add(new List<double>());
+                for (int j = 0; j < oldL[0].Count; j++)
+                {
+                    l[i].Add(0);
+                }
+            }
 
-            for (int i = 0; i < 3; i++)     //пересчёт ведущего столба
+            l[point.Y][point.X] = Math.Round(1 / oldL[point.Y][point.X], 3);     //пересчёт ведущего элемента
+
+            for (int i = 0; i < l[point.Y].Count; i++)     //пересчёт ведущего столба
             {
                 if (i == point.X)
                 {
                     continue;
                 }
 
-                m[i, point.Y] = Math.Round(-oldM[i, point.Y] / oldM[point.X, point.Y], 3);
+                l[point.Y][i] = Math.Round(-oldL[point.Y][i] / oldL[point.Y][point.X], 3);
             }
 
-            for (int i = 0; i < 3; i++)     //пересчёт ведущей строки
+            for (int i = 0; i < l.Count; i++)     //пересчёт ведущей строки
             {
                 if (i == point.Y)
                 {
                     continue;
                 }
 
-                m[point.X, i] = Math.Round(oldM[point.X, i]/oldM[point.X, point.Y], 3);
+                l[i][point.X] = Math.Round(oldL[i][point.X] / oldL[point.Y][point.X], 3);
             }
 
-            for (int i = 0; i < 2; i++)     //пересчёт остальных элементов
+            for (int i = 0; i < l[point.Y].Count-1; i++)     //пересчёт остальных элементов
             {
                 if (i == point.X)
                 {
                     continue;
                 }
-                for (int j = 1; j < 3; j++)
+                for (int j = 1; j < l.Count; j++)
                 {
                     if (j == point.Y)
                     {
                         continue;
                     }
 
-                    m[i, j] = Math.Round(oldM[i, j] - oldM[point.X, j] * oldM[i, point.Y] / oldM[point.X, point.Y], 3);
+                    l[j][i] = Math.Round(oldL[j][i] - oldL[j][point.X] * oldL[point.Y][i] / oldL[point.Y][point.X], 3);
                 }
             }
 
-            m[point.X, 0] = Math.Round(oldM[point.X, 0] / oldM[point.X, point.Y], 3);    //пересчёт БП в ведущей строке
+            l[0][point.X] = Math.Round(oldL[0][point.X] / oldL[point.Y][point.X], 3);    //пересчёт БП в ведущей строке
 
-            for (int i = 0; i < 2; i++)     //пересчёт остальных БП
+            for (int i = 0; i < l[point.Y].Count-1; i++)     //пересчёт остальных БП
             {
                 if (i == point.X)
                 {
                     continue;
                 }
-                m[i, 0] = Math.Round(oldM[i, 0] - oldM[point.X, 0] * oldM[i, point.Y] / oldM[point.X, point.Y], 3);
+                l[0][i] = Math.Round(oldL[0][i] - oldL[0][point.X] * oldL[point.Y][i] / oldL[point.Y][point.X], 3);
             }
 
-            m[2, point.Y] = Math.Round(-oldM[2, point.Y] / oldM[point.X, point.Y], 3);    //пересчёт ведущего С
+            l[point.Y][l[0].Count - 1] = Math.Round(-oldL[point.Y][l[0].Count - 1] / oldL[point.Y][point.X], 3);    //пересчёт ведущего С
 
-            for (int i = 1; i < 3; i++)     //пересчёт остальных С
+            for (int i = 1; i < l.Count; i++)     //пересчёт остальных С
             {
                 if (i == point.Y)
                 {
                     continue;
                 }
-                m[2, i] = Math.Round(oldM[2, i] - oldM[2, point.Y] * oldM[point.X, i] / oldM[point.X, point.Y], 3);
+                l[i][l[0].Count - 1] = Math.Round(oldL[i][l[0].Count - 1] - oldL[point.Y][l[0].Count - 1] * oldL[i][point.X] / oldL[point.Y][point.X], 3);
             }
 
-            m[2, 0] = Math.Round(oldM[2, 0] - oldM[point.X, 0] * oldM[2, point.Y] / oldM[point.X, point.Y], 3);    //пересчёт F
+            l[0][l[0].Count - 1] = Math.Round(oldL[0][l[0].Count - 1] - oldL[0][point.X] * oldL[point.Y][l[0].Count - 1] / oldL[point.Y][point.X], 3);    //пересчёт F
 
             string s = title[0, point.Y + 1];
             title[0, point.Y + 1] = title[1, point.X + 1];
             title[1, point.X + 1] = s;
 
-            buildTable(m, title);
+            buildTable(l, title);
 
-            return m;
+            return l;
         }
 
         private bool calcBase()
@@ -210,13 +231,13 @@ namespace BranchAndBoundMethod
 
             for (int i = 0; i < 3; i++)
             {
-                if (M[i, 0] < 0)
+                if (clm[0][i] < 0)
                 {
                     isPos = false;
 
-                    if (temp > M[i, 0])
+                    if (temp > clm[0][i])
                     {
-                        temp = M[i, 0];
+                        temp = clm[0][i];
                         point.X = i;
                     }
                 }
@@ -227,9 +248,9 @@ namespace BranchAndBoundMethod
                 temp = 0;
                 for (int i = 1; i < 3; i++)
                 {
-                    if (temp > M[point.X, i])
+                    if (temp > clm[i][point.X])
                     {
-                        temp = M[point.X, i];
+                        temp = clm[i][point.X];
                         point.Y = i;
                     }
                 } 
@@ -244,15 +265,15 @@ namespace BranchAndBoundMethod
             return isPos;
         }
 
-        private void buildTable(double[,] m, string[,] t)
+        private void buildTable(List<List<double>> l, string[,] t)
         {
             ResBox.Text += "\r\n" + t[0, 0] + t[0, 1] + t[0, 2] + t[0, 3] + "\r\n";
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < l[0].Count; i++)
             {
                 ResBox.Text += t[1, i + 1];
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < l.Count; j++)
                 {
-                    ResBox.Text += "   " + m[i, j];
+                    ResBox.Text += "   " + l[j][i];
                 }
                 ResBox.Text += "\r\n";
             }
@@ -264,39 +285,52 @@ namespace BranchAndBoundMethod
         {
             double temp = 0;
 
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i < clm.Count; i++)
             {
-                if (temp > M[2, i])
+                if (temp > clm[i][clm[0].Count - 1])
                 {
-                    temp = M[2, i];
+                    temp = clm[i][clm[0].Count - 1];
                     point.Y = i;
                 }
             }
 
-            if ((M[0, point.Y] < 0) && (M[1, point.Y] < 0))
+            int n = 0;
+
+            foreach (double d in clm[point.Y])
+            {
+                if (d < 0)
+                {
+                    n++;
+                }
+            }
+            if (n == clm[0].Count)
             {
                 ResBox.Text += "\r\nВ процессе оптимизации решения в ведущем столбце все элементы оказались неположительные. функция в области допустимых решений задачи не ограничена сверху!\r\n";
                 throw new EntryPointNotFoundException();
             }
             else
             {
-                if ((M[0, point.Y] == 0) && (M[1, point.Y] > 0))
+                List<double> tempL = new List<double>();
+
+                for (int i = 0; i < clm[point.Y].Count - 1; i++)
                 {
-                    point.X = 1;
-                    return;
-                }
-                else if ((M[0, point.Y] > 0) && (M[1, point.Y] == 0))
-                {
-                    point.X = 0;
-                    return;
+                    if (clm[point.Y][i] < 0)
+                    {
+                        tempL.Add(0);
+                        continue;
+                    }
+
+                    tempL.Add(clm[0][i]/clm[point.Y][i]);
                 }
 
-                temp = M[0, 0] / M[0, point.Y];
-                point.X = 0;
-
-                if (temp < M[1, 0] / M[1, point.Y])
+                temp = Double.PositiveInfinity;
+                for (int i = 0; i < tempL.Count; i++)
                 {
-                    point.X = 1;
+                    if ((temp > tempL[i]) && (tempL[i] != 0))
+                    {
+                        temp = tempL[i];
+                        point.X = i;
+                    }
                 }
             }
         }
